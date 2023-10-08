@@ -7,6 +7,8 @@ enable_language(CXX)
 
 find_package(CURL REQUIRED)
 
-add_executable(ai_cli_meal_project main.c)
+add_executable(ai_cli_meal_project main.c
+        env_reader.h
+        env_reader.c)
 
 target_link_libraries(ai_cli_meal_project CURL::libcurl)

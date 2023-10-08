@@ -1,0 +1,10 @@
+//
+// Created by jakob on 08/10/2023.
+//
+
+#ifndef AI_CLI_MEAL_PROJECT_ENV_READER_H
+#define AI_CLI_MEAL_PROJECT_ENV_READER_H
+
+char* get_api_key();
+
+#endif //AI_CLI_MEAL_PROJECT_ENV_READER_H
