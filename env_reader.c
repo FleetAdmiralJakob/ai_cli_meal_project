@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+// TODO: Unlimited API keys
 char* get_api_keys(const char* key) {
     FILE* file;
     errno_t err;
