@@ -40,7 +40,7 @@ int main() {
 
     char spoonacularurl[MAX_LENGTH];
 
-    char* api_key = get_api_key();
+    char* api_key = get_api_keys("API_KEY");
 
     struct MemoryStruct response_data;
     response_data.memory = malloc(1);
@@ -70,6 +70,7 @@ int main() {
 
     printf("\nOkay! Let me find you a recipe for %s!", meal);
     // TODO: Loading animation
+
     if(curl) {
         encoded_meal = curl_easy_escape(curl, meal, 0);
         sprintf(spoonacularurl, "https://api.spoonacular.com/recipes/complexSearch?apiKey=%s&query=%s", api_key, encoded_meal);
