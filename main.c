@@ -40,7 +40,7 @@ int main() {
 
     char spoonacularurl[MAX_LENGTH];
 
-    char* api_key = get_api_keys("API_KEY");
+    char** api_key = get_api_keys((const char *[]){"API_KEY"}, 1);
 
     struct MemoryStruct response_data;
     response_data.memory = malloc(1);
@@ -73,7 +73,7 @@ int main() {
 
     if(curl) {
         encoded_meal = curl_easy_escape(curl, meal, 0);
-        sprintf(spoonacularurl, "https://api.spoonacular.com/recipes/complexSearch?apiKey=%s&query=%s", api_key, encoded_meal);
+        sprintf(spoonacularurl, "https://api.spoonacular.com/recipes/complexSearch?apiKey=%s&query=%s", api_key[0], encoded_meal);
         free(api_key);
         curl_free(encoded_meal);
 
